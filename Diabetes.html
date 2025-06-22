@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Noto+Kufi+Arabic:wght@100..900&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+        <!-- Font Awesome Library -->
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="webfonts">
+        
+        <title>حساب جرعة الأنسولين</title>
+    <style>
+        body {
+            background-color: #080c14;
+            color: white;
+            font-family: "Rubik", sans-serif;
+            text-align: center;
+            padding: 20px;
+            height: 230vh;
+            text-decoration: none;
+        }
+
+
+        .container {
+            max-width: 1500px;
+            height: 700px;
+            margin: 265px  auto;
+            padding: 100px;
+            background-color: #1e283b;
+            border-radius: 10px;
+            transform: translateY(-100px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .container h1 {
+            transform: translate(0px,-65px);
+            border-bottom: 1px solid #f76d0b;
+            padding-bottom: 10px;
+
+
+
+        }
+
+        h1 {
+            color: #f76d0b;
+            font-family: "Rubik", sans-serif;
+
+        }
+
+    .container-of-instructions {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+        height: 33%;
+        border-radius: 25px;
+        background-color: #1e283b;
+        padding: 0;
+        margin: 0;
+        transform: translateY(115px);
+}
+        
+
+    .container-of-instructions span {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 30px;
+            padding: 13px;
+            font-family: "Rubik", sans-serif;
+            margin: 0;
+        }
+        .container-of-instructions h1 {
+            transform: translate(-20px, 0px);
+            color: #007bff;
+            background-color: #111620;
+            font-family: "Rubik", sans-serif;
+
+        }
+
+        .input-container {
+            position: relative;
+            margin: 20px 0;
+        }
+
+        .input-container input {
+            width: 100px;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #080c14;
+            border-radius: 30px;
+            background-color: #080c14;
+            color: white;
+            outline: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .input-container input.expanded {
+            width: 95%;
+            border-radius: 30px;
+        }
+
+        .background-input {
+            display: flex;
+            align-items: center;
+            width: 245px;
+            padding: 15px;
+            transform: translate(-5px, 15px);
+            border-radius: 30px;
+            background-color: #12192e;
+            transition: all 0.3s ease;
+            color: #EEE;
+        }
+
+        .expandable-input{
+            color: #eee;
+        }
+
+        .background-input.expanded {
+            width: 95%;
+            border-radius: 30px;
+
+        }
+
+        .background-input input {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .background-input button {
+            width: 109px;
+            height: 49px;
+            padding: 0px;
+            white-space: normal;
+        }
+
+        .input-container label {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            font-size: 16px;
+            color: #007bff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .input-container input:focus + label {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 45px;
+            font-size: 15px;
+            cursor: pointer;
+            font-family: "Rubik", sans-serif;
+            transition: 0.3s;
+
+        }
+
+        button:hover {
+            background-color: #080c14;
+            color: aliceblue;
+        }
+
+        .result-box {
+            margin: 5px auto;
+            padding: 15px;
+            width: 15%;
+            background-color: #080c14;
+            border: 1px solid #f76d0b;
+            border-radius: 5px;
+            font-size: 18px;
+            color: white;
+            font-family: "Rubik", sans-serif;
+            transform: translate(0px, 40px);
+        }
+
+        .result-box span {
+            display: block;
+            margin: 5px 0;
+            font-family: "Rubik", sans-serif;
+
+        }
+
+        #carbInputContainer {
+            transform: translate(0, 90px);
+
+        }
+
+        #insulinResultBox {
+            transform: translate(0px, 125px);
+        }
+
+
+    #resetBtn {
+            width: auto;
+            padding: 15px 30px;
+            transform: translate(0px, 135px);
+            margin-bottom: -4px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 45px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+        #resetBtn:hover {
+            background-color: #080c14; /* لون أحمر داكن عند التمرير */
+        }
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* ----------------[-- Name of type and Return  --] ---------------------------------------------------*/
+
+.Type-name {
+    width: 300px;
+    height: 120px;
+    background-color: #1e283b;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    font-family: "Rubik", sans-serif;
+    font-size: 20px;  
+    transform: translate(-225%, 40px);
+
+} 
+.Type-name span {
+    color: #007bff;
+    font-size: 30px;
+    font-family: "Rubik", sans-serif;
+    transform: translate(-20px, -30px);
+}
+
+.Type-name svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 25px;
+    text-align: center;
+    font-size: 20px;
+    transform: translate(75px, 20px);
+    background-color: #007bff;
+    color: #EEE;
+    border-radius: 20px;
+    text-decoration: inherit;
+    box-decoration-break: none;
+    
+}
+i {
+    text-decoration: none;
+}
+
+/* ------------------------------------ Media Query 430px --------------------------------------------------- */
+/* ------------------------------------ Media Query 430px --------------------------------------------------- */
+/* ------------------------------------ Media Query 430px --------------------------------------------------- */
+@media (max-width: 430px) {
+
+
+    body {
+            background-color: #080c14;
+            color: white;
+            font-family: "Rubik", sans-serif;
+            text-align: center;
+            padding: 20px;
+            height: 260vh;
+            text-decoration: none;
+        }
+    .container {
+            max-width: 1500px;
+            height: 790px;
+            margin: 265px  auto;
+            padding: 100px;
+            background-color: #1e283b;
+            border-radius: 10px;
+            transform: translateY(25px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .container h1 {
+            transform: translate(0px,-65px);
+            border-bottom: 1px solid #f76d0b;
+            padding-bottom: 10px;
+
+
+
+        }
+
+        h1 {
+            color: #f76d0b;
+            font-family: "Rubik", sans-serif;
+
+        }
+
+    .container-of-instructions {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+        height: 43%;
+        border-radius: 25px;
+        background-color: #1e283b;
+        padding: 0;
+        margin: 0;
+        transform: translateY(180px);
+}
+        
+
+    .container-of-instructions span {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 30px;
+        padding: 20px;
+        font-family: "Rubik", sans-serif;
+        margin: 0;
+        }
+        .container-of-instructions h1 {
+            transform: translate(-20px, 0px);
+            color: #007bff;
+            background-color: #111620;
+            font-family: "Rubik", sans-serif;
+
+        }
+
+        .input-container {
+            position: relative;
+            margin: 20px 0;
+        }
+
+        .input-container input {
+            width: 100px;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #080c14;
+            border-radius: 30px;
+            background-color: #080c14;
+            color: white;
+            outline: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .input-container input.expanded {
+            width: 95%;
+            border-radius: 30px;
+        }
+
+        .background-input {
+            display: flex;
+            align-items: center;
+            width: 245px;
+            padding: 15px;
+            transform: translate(50px, -25px);
+            border-radius: 30px;
+            background-color: #12192e;
+            transition: all 0.3s ease;
+            color: #EEE;
+        }
+
+        .expandable-input{
+            color: #eee;
+        }
+
+        .background-input.expanded {
+            width: 145%;
+            border-radius: 30px;
+
+        }
+
+        .background-input input {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .background-input button {
+            width: 109px;
+            height: 49px;
+            padding: 0px;
+            white-space: normal;
+        }
+
+        .input-container label {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            font-size: 16px;
+            color: #007bff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .input-container input:focus + label {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 45px;
+            font-size: 15px;
+            cursor: pointer;
+            font-family: "Rubik", sans-serif;
+            transition: 0.3s;
+
+        }
+
+        button:hover {
+            background-color: #080c14;
+            color: aliceblue;
+        }
+
+        .result-box {
+            margin: 5px auto;
+            padding: 15px;
+            width: 80%;
+            background-color: #080c14;
+            border: 1px solid #f76d0b;
+            border-radius: 5px;
+            font-size: 18px;
+            color: white;
+            font-family: "Rubik", sans-serif;
+            transform: translate(0px, 40px);
+        }
+
+        .result-box span {
+            display: block;
+            margin: 5px 0;
+            font-family: "Rubik", sans-serif;
+
+        }
+
+        #carbInputContainer {
+            transform: translate(50px, 90px);
+
+        }
+
+        #insulinResultBox {
+            transform: translate(0px, 125px);
+        }
+
+
+    #resetBtn {
+            width: auto;
+            padding: 15px 30px;
+            transform: translate(0px, 135px);
+            margin-bottom: -4px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 45px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+        #resetBtn:hover {
+            background-color: #080c14; /* لون أحمر داكن عند التمرير */
+        }
+/* --------------------------------------------------------------------------------------------------------------------- */
+/* ----------------[-- Name of type and Return  --] ---------------------------------------------------*/
+
+.Type-name {
+    width: 300px;
+    height: 120px;
+    background-color: #1e283b;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    font-family: "Rubik", sans-serif;
+    font-size: 20px;  
+    transform: translate(-12%, 10px);
+} 
+.Type-name span {
+    color: #007bff;
+    font-size: 30px;
+    font-family: "Rubik", sans-serif;
+    transform: translate(-20px, -30px);
+}
+
+.Type-name svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 25px;
+    text-align: center;
+    font-size: 20px;
+    transform: translate(75px, 20px);
+    background-color: #007bff;
+    color: #EEE;
+    border-radius: 20px;
+    text-decoration: inherit;
+    box-decoration-break: none;
+    
+}
+i {
+    text-decoration: none;
+}
+
+}
+
+
+
+/* -------------------------------media Query 390px ----------------------------------------------------- */
+/* -------------------------------media Query 390px ----------------------------------------------------- */
+@media (max-width: 390px) {
+    body {
+        height: 300vh;
+    }
+
+    .container-of-instructions {
+        width: 110%;
+        height: 40%;
+        transform: translate(16px, 100px);
+    }
+
+
+    .container {
+    width: 163px;
+    height: 820px;
+    transform: translate(15px, -10px);
+    }
+
+        #resetBtn {
+            width: auto;
+            padding: 10px 40px;
+            transform: translate(0px, 125px);
+
+        }
+}
+
+/* -------------------------------media Query 360px ----------------------------------------------------- */
+/* -------------------------------media Query 360px ----------------------------------------------------- */
+
+@media (max-width: 360px) {
+
+body {
+    height: 320vh;
+}
+
+.container-of-instructions {
+        height: 40%;
+        width: 108%;
+        transform: translate(13px, 150px);
+ }
+
+
+    .container {
+        width: 140px;
+        height: 900px;
+        margin: 265px auto;
+        padding: 100px;
+        background-color: #1e283b;
+        border-radius: 10px;
+        transform: translate(16px, 26px);
+
+    }
+
+    .Type-name {
+        transform: translate(0%, 20px);
+    }
+
+    .Type-name svg {
+     transform: translate(70px, 20px);
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+ <!-------------------------------------------- Html-Diabetes ------------------------------------->
+        <div class="Type-name">
+            <span>Diabetes</span>
+            <a href="Service-dia.html" class="return">
+<svg xmlns="http://www.w3.org/2000/svg" height="12" width="10.5" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#ffffff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>        
+        </a>
+</div>
+        
+        
+
+
+    <div class="container-of-instructions">
+        <h1>تعليمات الاستخدام :</h1>
+        <span><i class="fa-solid fa-star-of-life" style="color: #080c14;"></i> ادخل وزنك بالكيلوغرام في الحقل الأول.</span>
+        <span><i class="fa-solid fa-star-of-life" style="color: #080c14;"></i> اضغط على زر "احسب الآن!" للحصول على جرعة الأنسولين اليومية.</span>
+        <span><i class="fa-solid fa-star-of-life" style="color: #080c14;"></i> ادخل كمية الكربوهيدرات في الحقل الثاني.</span>
+        <span><i class="fa-solid fa-star-of-life" style="color: #080c14;"></i> اضغط على زر "احسب الآن!" للحصول على جرعة الأنسولين لكل جرام كربوهيدرات.</span>
+        <span><i class="fa-solid fa-star-of-life" style="color: #080c14;"></i> اضغط على زر "احسب الآن!" للحصول على جرعة الأنسولين المطلوبة.</span>
+        <span><i class="fa-solid fa-star-of-life" style="color: #080c14;"></i> اضغط على زر "إعادة الحساب" لإعادة الحساب.</span>
+    </div>
+
+    <div class="container">
+        <h1>حساب جرعة الأنسولين</h1>
+
+        <div class="input-container">
+            <div class="background-input">
+                <input type="number" id="inputNumber" placeholder="الوزن بالكيلوغرام" class="expandable-input">
+                <button id="calculateBtn">احسب الآن!</button>
+            </div>
+        </div>
+
+        <div class="result-box" id="resultBox1">
+            <span id="resultValue1"></span>
+            <span id="resultText1" style="display:none;">جرعة الأنسولين اليومية</span>
+        </div>
+
+        <div class="result-box" id="resultBox2">
+            <span id="resultValue2"></span>
+            <span id="resultText2" style="display:none;">جرعة الأنسولين لكل جرام كربوهيدرات</span>
+        </div>
+
+        <div class="input-container">
+            <div class="background-input" id="carbInputContainer">
+                <input type="number" id="carbInput" placeholder="كمية الكربوهيدرات" class="expandable-input">
+                <button id="insulinCalcBtn">احسب الآن!</button>
+            </div>
+        </div>
+
+
+        <!-- نتيجة جرعة الأنسولين -->
+        <div class="result-box" id="insulinResultBox">
+            <span id="insulinDose"></span>
+            <span id="insulinText" style="display:none;">وحدة أنسولين</span>
+        </div>
+    
+            <button id="resetBtn">إعادة الحساب</button>
+    
+    </div>
+
+    <script>
+        document.querySelectorAll('.expandable-input').forEach(input => {
+            const backgroundInput = input.parentElement;
+
+            input.addEventListener('click', function () {
+                this.classList.add('expanded');
+                backgroundInput.classList.add('expanded');
+                this.focus();
+            });
+
+            input.addEventListener('blur', function () {
+                if (this.value.trim() !== "") {
+                    this.classList.add('expanded');
+                    backgroundInput.classList.add('expanded');
+                } else {
+                    this.classList.remove('expanded');
+                    backgroundInput.classList.remove('expanded');
+                }
+            });
+        });
+
+        const calculateBtn = document.getElementById('calculateBtn');
+        const insulinCalcBtn = document.getElementById('insulinCalcBtn');
+
+        calculateBtn.addEventListener('click', function () {
+            const inputValue = parseFloat(document.getElementById('inputNumber').value);
+
+            if (isNaN(inputValue) || inputValue <= 0) {
+                alert("الرجاء إدخال وزن صحيح!");
+                return;
+            }
+
+            const result1 = inputValue * 0.55;
+            const result2 = 450 / result1;
+
+            document.getElementById('resultValue1').textContent = result1.toFixed(1);
+            document.getElementById('resultText1').style.display = "inline";
+
+            document.getElementById('resultValue2').textContent = result2.toFixed(1);
+            document.getElementById('resultText2').style.display = "inline";
+        });
+
+        insulinCalcBtn.addEventListener('click', function () {
+            const carbGrams = parseFloat(document.getElementById('carbInput').value);
+            const insulinPerGram = parseFloat(document.getElementById('resultValue2').textContent);
+
+            if (isNaN(carbGrams) || isNaN(insulinPerGram) || carbGrams <= 0) {
+                alert("الرجاء ادخال الوزن اولا ثم كمية الكربوهيدرات!");
+                return;
+            }
+
+            const requiredInsulin = carbGrams / insulinPerGram;
+
+            document.getElementById('insulinDose').textContent = requiredInsulin.toFixed(1);
+            document.getElementById('insulinText').style.display = "inline";
+        });
+
+                    // الحصول على زر إعادة الحساب
+            const resetBtn = document.getElementById('resetBtn');
+
+            // إضافة حدث عند النقر على زر إعادة الحساب
+            resetBtn.addEventListener('click', function () {
+                // إعادة تعيين حقول الإدخال
+                document.getElementById('inputNumber').value = '';
+                document.getElementById('carbInput').value = '';
+
+                // إعادة تعيين النتائج
+                document.getElementById('resultValue1').textContent = '';
+                document.getElementById('resultText1').style.display = 'none';
+                document.getElementById('resultValue2').textContent = '';
+                document.getElementById('resultText2').style.display = 'none';
+                document.getElementById('insulinDose').textContent = '';
+                document.getElementById('insulinText').style.display = 'none';
+
+                // إعادة تعيين التمدد إذا كان مفتوحًا
+                document.querySelectorAll('.expandable-input').forEach(input => {
+                    input.classList.remove('expanded');
+                    input.parentElement.classList.remove('expanded');
+                });
+            });
+    </script>
+</body>
+</html>

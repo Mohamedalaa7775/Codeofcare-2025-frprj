@@ -1,0 +1,1226 @@
+body {
+    font-family: "Rubik", sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 420vh;
+    background-color: #030509;
+    /* 080c14 */
+ 
+}
+
+
+   
+* {
+        box-sizing: border-box;
+        text-decoration: none;
+    }
+
+
+/* ------------------Logo--------------- */
+
+.head {
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    z-index: 100000;
+}
+.head a {
+    padding: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: #00caff;
+
+}
+.head-h4 {
+    color: #00caff;
+    width: 200px;
+    font-size: 30px;
+    transform: translate(255px, -110px);
+    font-family: "Josefin Sans", sans-serif;
+}
+.line {
+    width: 1px;
+    border: 1.4px solid #00caff;
+    height: 31px;
+    transform: translate(241px, -32px);
+}
+
+/* -------------- Arabic text ------------------------- */
+    .Doctor-animation {
+        width: 38em;
+        height: 44em;
+        transform: translate(1057px, -120%)
+    }
+
+
+
+    .Ar-Text {
+        font-size: 33px;
+        width: 62%;
+        margin-top: -78%;
+        margin-left: 2%;
+        direction: rtl;
+        color: #EEE;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        font-family: "Rubik", sans-serif;
+    }
+
+    /* ------------------------------------------------------------------- */
+    .upper-svg {
+        width: 99vw;
+        height: 100vh;
+        position: relative;
+        z-index: -10000000000;
+        transform: translate(0px, -49%);
+    }
+    
+    .moving-gradient {
+        animation: moveGradient 5s linear infinite;
+    }
+    @keyframes moveGradient {
+        0% {
+            stop-color: cyan;
+        }
+        50% {
+            stop-color: #004aff;
+        }
+        100% {
+            stop-color: cyan;
+        }
+    }
+    .bottom-svg {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        z-index: -10000000000;
+        transform: translate(-106px, -58%) rotate(39deg);
+
+    }
+    
+    .moving-gradient {
+        animation: moveGradient 5s linear infinite;
+    }
+    @keyframes moveGradient {
+        0% {
+            stop-color: cyan;
+        }
+        50% {
+            stop-color: #004aff;
+        }
+        100% {
+            stop-color: cyan;
+        }
+    }
+
+
+
+    .Ar-Text-and-animated-svg {
+        margin-top: -65%;
+    }
+
+
+    .dotlottie-player-dowan-arrow-1 {
+        width: 180px;
+        height: 180px;
+        transform: translate(50em,-14em);
+    }
+   
+   
+    .dotlottie-player-dowan-arrow-2 {
+        width: 180px;
+        height: 180px;
+        transform: translate(50em,59em);
+    }
+
+
+
+
+    .codeofcare-video iframe {
+        width: 1200px;
+        height: 630px;
+        transform: translate(20%, 150%);
+        border-radius: 50px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .svg-under-video {
+        display: block;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    
+    .animated-bottom-arrow {
+        width: 50%;
+        height: 50%;
+        transform: translate3d(0px, 200px, 0px);
+        content-visibility: visible;
+    }
+
+
+
+
+
+    /* -------------------------------3 Box------------------------------- */
+
+    .Upper-page {
+        margin-top: -110px;
+    }
+
+
+    .Big-box {
+        height: 30em;
+        width: 95%;
+        display: flex ;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        background: #020306;
+        transform: translate(2.5%, 173px);
+        border-radius: 50px
+        
+    }
+    .Big-box h1 {
+        font-size: 64px;
+        color: #ffffff;
+        margin-top: -1px;
+        transform: translate(-35px, -35px);
+}
+    .Big-box p {
+        font-size: 18px;
+        color: #ffffff;
+        font-family: "Rubik", sans-serif;
+        margin-top: -1px;
+        transform: translate(36px, -61px);
+    }
+
+
+
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 66%;
+        position: relative;
+        z-index: 1;
+        height: 70em;
+        background-color: #0a121f;
+        opacity: 75%;
+        box-shadow: 0 0 63px 88px #0a121f;
+        }
+
+    .Box-container {
+            display: flex;
+            gap: 0px;
+            margin-top: 58%;
+            position: relative;
+            z-index: 1;
+            margin-left: 8px;
+        }
+
+
+
+    .Box-container div {
+        width: 18em;
+        height: 17em;
+        position: relative;
+        z-index: 1000000;
+        font-family: "Josefin Sans", sans-serif;
+        background-color: #ffffff;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 21px;
+        color: white;
+        font-weight: bold;
+        margin-top: -95%;
+        margin-left: 27px;
+    }
+    
+
+    
+    
+    .Box-container div h3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        color: #030509;
+        font-family: "Rubik", sans-serif;
+        margin-top: -1px;
+        transform: translate(0px, 5px);
+        position: relative;
+        z-index: 100000;
+    }
+    .Box-container div p {
+        font-size: 19px;
+        color: #030509;
+        font-family: "Rubik", sans-serif;
+        margin-top: -6px;
+        position: relative;
+        z-index: 100000;
+    }
+   
+
+    
+    
+     .Box-1 img ,.Box-2 img,.Box-3 img,.Box-4 img {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        z-index: 100000;
+    } 
+
+    #Chatbot-Word {
+       color: #002cfc;
+    }
+
+ /* <!---------------------------------Main-Sections----------------------------------> */
+
+  /* أنماط الحاوية الرئيسية */
+  .interactive-sections-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 50px 5%;
+    background: linear-gradient(135deg, #030509 0%, #010409cc 100%);
+    position: relative;
+    z-index: 10000000000000000000;
+    margin: 40px 0;
+    transform: translate(0px, -183%);
+}
+
+.enhanced-chatbot-section,
+.enhanced-measuring-section {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    background: #131c2b;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.enhanced-chatbot-section:hover,
+.enhanced-measuring-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.chatbot-content,
+.measuring-content {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.chatbot-header,
+.measuring-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.chatbot-header h3,
+.measuring-header h3 {
+    font-size: 24px;
+    color: #EEE;
+    font-family: 'Almarai', sans-serif;
+    margin: 0;
+}
+
+.chatbot-icon,
+.measuring-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+}
+
+.chatbot-icon {
+    background: linear-gradient(135deg, #64b5f6 0%, #1e88e5 100%);
+}
+
+.measuring-icon {
+    background: linear-gradient(135deg, #66bb6a 0%, #43a047 100%);
+}
+
+/* أنماط الوصف */
+.chatbot-description,
+.measuring-description {
+    color: #EEE;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 16px;
+}
+
+/* أنماط الميزات */
+.chatbot-features,
+.measuring-features {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.feature i {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+}
+
+.chatbot-features .feature i {
+    background: #64b5f6;
+}
+
+.measuring-features .feature i {
+    background: #66bb6a;
+}
+
+.feature span {
+    color: #EEE;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    font-size: 15px;
+}
+
+/* أنماط الأزرار */
+.chatbot-button,
+.measuring-button {
+    background: linear-gradient(45deg, #0337a1, #00caff);
+    color: white;
+    font-size: 20px;
+    margin-top: -30%;
+    margin-left: 63%;
+    padding: 15px 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+    font-weight: bold;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.chatbot-button {
+    background: linear-gradient(135deg, #64b5f6 0%, #1e88e5 100%);
+}
+
+.measuring-button {
+    background: linear-gradient(135deg, #66bb6a 0%, #43a047 100%);
+}
+
+.chatbot-button:hover,
+.measuring-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.chatbot-button a,
+.measuring-button a {
+    color: white;
+    text-decoration: none;
+}
+
+/* أنماط الجزء المرئي */
+.chatbot-visual,
+.measuring-visual {
+    flex: 1;
+    min-width: 250px;
+    background: #131c2b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.chatbot-visual img,
+.measuring-visual img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+
+
+.Qaid-el-enshaa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+    position: absolute;
+    z-index: 10000000000000000000;
+    color: #EEE;
+    transform: translate(27px,275px);
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------------------------- */
+
+
+.Main-section {
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    transform: translateY(-75%);
+    height: 40%;
+    background-color: #061228cc;
+    box-shadow: 0 0 63px 88px #061228cc;
+
+    
+}
+
+.main-section-svg {
+position: relative;
+z-index: 1111;
+}
+
+
+ .Diabetes-section {
+    flex: 1;
+    position: relative;
+    width: 31.333%;
+    height: 45em;
+    background: #030509;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s;
+    margin-top: 30%;
+
+}
+.disease-background-Diabetes::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to right, #f7990b, #f26806);
+    border-radius: 215px 203px 1896% 0%;
+}
+
+.disease-background-Hypertension::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to right, #00caff, #5196cf);
+    border-radius: 215px 203px 1896% 0%;
+}
+.disease-background-Heart::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to right, #b51515, #2b0707);
+    border-radius: 215px 203px 1896% 0%;
+}
+
+
+
+
+.disease-name {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 25%;
+    color: #EEE;
+}
+.disease-description {
+    font-size: 18px;
+    margin-top: 10%;
+    color: #EEE;
+    font-weight: bold;
+}
+
+.Diabetes-section .pulse-button {
+    margin-top: 5%;
+}
+
+/*--------------------------------------------------------------------------------------------*/
+.Icon-Of-Cards {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 42px;
+    color: white;
+
+    margin: 0 auto 15px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+
+
+
+/* ------------------------------------------------------------------------ */
+
+.Hypertension-section {
+    flex: 1;
+    position: relative;
+    width: 31.333%;
+    height: 45em;
+    background: #030509;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s;
+    margin-top: 30%;
+}
+
+
+.cross-icon {
+    width: 50px;
+    height: 50px;
+    background: red;
+    position: absolute;
+    z-index: 10000;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+/* --------------------------------button---------------------------------------- */
+.Heart-section {
+    flex: 1;
+    position: relative;
+    width: 31.333%;
+    height: 45em;
+    background: #030509;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s;
+    margin-top: 30%;
+
+}
+
+
+.cross-icon {
+    width: 50px;
+    height: 50px;
+    background: red;
+    position: absolute;
+    z-index: 10000;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+
+    
+/* --------------------------------button---------------------------------------- */
+    
+    .pulse-button {
+        /* background: linear-gradient(45deg, #28a745, #20c997); */
+        background: linear-gradient(45deg, #0337a1, #00caff);
+        color: white;
+        font-size: 18px;
+        margin-top: -30%;
+        margin-left: 0%;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        outline: none;
+        font-weight: bold;
+        position: relative;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s;
+    }
+    .button-sections {
+        transform: translate(0px, 40px);
+    }
+
+    .Diabetes-section .pulse-button{
+        background: linear-gradient(to right, #f7990b, #f26806);
+    }
+
+    .Hypertension-section .pulse-button{
+    background: linear-gradient(to right, #00caff, #5196cf);
+    }
+    .Heart-section .pulse-button{
+        background: linear-gradient(to right, #b51515, #2b0707)
+    }
+      
+    .pulse-button a {
+        color: white;
+    }
+    .pulse-button:hover {
+        transform: scale(1.05);
+    }
+    .pulse-button::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        background: rgba(40, 167, 69, 0.5);
+        border-radius: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+        animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+        0% {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 0.6;
+        }
+        100% {
+            transform: translate(-50%, -50%) scale(1.5);
+            opacity: 0;
+        }
+    }
+
+
+
+ /* <!--=================================== medicine sql =====================================================================--> */
+
+    .medcine-sql-container {
+    position: relative;
+    z-index: 1000;
+    height: 175px;
+    margin: 60px auto;
+    max-width: 950px;
+    transform: translate(170px, -900%);
+    text-align: right;
+    border-radius: 200px;
+    overflow: hidden;
+    background: #131c2b;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .medcine-sql-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 200px;
+        padding: 3px;
+        background: linear-gradient(45deg, #0077b6, #00b4d8, #90e0ef, #00b4d8, #0077b6);
+        background-size: 400% 400%;
+        -webkit-mask: 
+            linear-gradient(#fff 0 0) content-box, 
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        animation: borderAnimation 4s linear infinite;
+    }
+
+    /* نص الوصف */
+    .medcine-sql-container p {
+        margin-bottom: 25px;
+        font-size: 20px;
+        width: 610px;
+        transform: translate(155px, 10px);
+        line-height: 1.6;
+        color: #EEE;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* زر إدارة الأدوية */
+    .medcine-button-sections a {
+        display: inline-block;
+        padding: 25px 34px;
+        background: linear-gradient(to right, #0077b6, #00b4d8);
+        color: white;
+        font-size: 1.1rem;
+        transform: translate(-485%, -90px); 
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        border: none;
+        box-shadow: 0 4px 15px rgba(0, 119, 182, 0.3);
+    }
+
+
+
+    .medicine-icon-circle {
+    width: 174px;
+    height: 174px;
+    background: linear-gradient(135deg, #0077b6, #00b4d8);
+    border-radius: 50%;
+    position: relative;
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(319%, -770%);
+    margin: 0 auto 25px;
+    border: 1px solid #0077b6;
+    box-shadow: 0 4px 15px rgba(0, 119, 182, 0.3);
+    transition: all 0.4s ease;
+    }
+
+    .medicine-icon-circle i {
+    font-size: 5rem;
+    transform: rotate(-21deg) translate(7px, -6px);
+    }
+
+    /* حركة الحدود */
+    @keyframes borderAnimation {
+        0% {
+            background-position: 50% 50%;
+            opacity: 0;
+        }
+        10% {
+            opacity: 1;
+        }
+        25% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        75% {
+            background-position: 50% 100%;
+        }
+        100% {
+            background-position: 50% 50%;
+            opacity: 0;
+        }
+    }
+
+
+
+ /* <!--=================================== Footer =====================================================================--> */
+
+
+
+.social-footer {
+    background-color: #060f22;
+    padding: 180px 40px;
+    text-align: center;
+    border-top: none;
+    transform: translate(0px, -285%);
+    box-shadow: 0 0 63px 88px #060f22;
+
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.social-link {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #030509;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+footer h3 {
+    color: #abd6fb;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: 'Almarai', sans-serif;
+}
+
+.social-link i {
+    font-size: 20px;
+    color: #EEE;
+}
+
+.copyright {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* ألوان خاصة بكل شبكة اجتماعية */
+.twitter:hover { background-color: #1DA1F2; }
+.facebook:hover { background-color: #1877F2; }
+.instagram:hover { background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); }
+.linkedin:hover { background-color: #0077B5; }
+.tiktok:hover { background-color: #150202; }
+.youtube:hover { background-color: #FF0000; }
+
+
+
+.social-link:hover i {
+    color: white;
+
+}
+
+.twitter svg {
+    width: 21px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================================================================================== */
+/* Media Queries متدرجة من الأصغر إلى الأكبر */
+/* =========================================================================================================== */
+/* Mobile */
+
+
+
+
+
+/* لأجهزة الموبايل عامة */
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    overflow-x: hidden;
+  }
+
+  .head {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .bottom-svg {
+    width: 167%;
+    height: 128vh;
+    position: relative;
+    z-index: -10000000000;
+    transform: translate(-105px, -67%) rotate(39deg);
+}
+
+    .head-h4 {
+        display: none;
+    }
+
+    .Ar-Text-and-animated-svg {
+        margin-top: -475%;
+            }
+  .line {
+    display: none;
+  }
+
+  .Doctor-animation {
+    width: 100%;
+    transform: translate(15px, 0px);
+    height: auto;
+  }
+
+  .Ar-Text {
+    font-size: 20px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .Upper-page {
+    margin-top: -70px;
+    }   
+
+  .dotlottie-player-dowan-arrow-1,
+  .dotlottie-player-dowan-arrow-2 {
+    width: 100px;
+    height: 100px;
+    transform: none;
+    margin: 20px auto;
+  }
+
+  .codeofcare-video iframe {
+    width: 100%;
+    height: 250px;
+    transform: none;
+    position: static;
+  }
+
+  .Big-box {
+        flex-direction: column;
+        height: auto;
+        padding: 30px;
+        transform: translateY(10%);
+        text-align: center;
+  }
+
+  .Big-box h1 {
+    font-size: 30px;
+    transform: none;
+  }
+
+  .Big-box p {
+    font-size: 16px;
+    transform: none;
+  }
+
+  .Box-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    box-shadow: none;
+  }
+    .container {
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    }
+  .Box-container div {
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  .interactive-sections-container {
+    flex-direction: column;
+    padding: 20px;
+    transform: none;
+  }
+
+  .enhanced-chatbot-section,
+  .enhanced-measuring-section {
+    flex-direction: column;
+  }
+
+  .chatbot-button,
+  .measuring-button {
+    margin: 0 auto;
+  }
+
+  .Main-section {
+    flex-direction: column;
+    transform: none;
+  }
+
+  .Diabetes-section,
+  .Hypertension-section,
+  .Heart-section {
+    width: 90%;
+    margin: 20px auto;
+    height: auto;
+  }
+
+  .Icon-Of-Cards {
+    margin: 0 auto;
+    transform: translate(-111px, -25px);
+  }
+
+    .button-sections {
+        transform: translate(0px, -5px);
+    }
+
+    .disease-description {
+    transform: translateY(-20px);
+        }
+
+
+  .medcine-sql-container {
+    transform: none;
+    width: 100%;
+    height: 190px;
+    border-radius: 20px;
+  }
+
+  .medcine-sql-container p {
+    transform: none;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .medcine-button-sections a {
+    transform: translate(0px, -25px);
+    padding: 10px 20px;
+    margin: 10px auto;
+    display: block;
+    width: fit-content;
+  }
+
+  .medicine-icon-circle {
+    transform: translate(10px, 55px);
+    margin: 0 auto;
+    width: 120px;
+    height: 120px;
+  }
+
+  .medcine-sql-container::before {
+    border-radius: 20px;
+  }
+
+  .social-footer {
+    padding: 80px 20px;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+  }
+  .Qaid-el-enshaa{
+    transform: translate(215px, 225px);
+  }
+}
+
+
+/* لأجهزة بين 450px و 470px */
+@media (max-width: 470px) and (min-width: 450px) {
+  .head {
+    font-size: 1.3rem;
+  }
+
+  .head-h4 {
+    font-size: 18px;
+    width: 95%;
+  }
+
+  .Ar-Text {
+    font-size: 18px;
+  }
+
+
+  .dotlottie-player-dowan-arrow-1,
+  .dotlottie-player-dowan-arrow-2 {
+    width: 80px;
+    height: 80px;
+    margin: 20px auto 0 auto; /* خليها تطلع لفوق وتوسّطها */
+    display: block;
+  }
+  
+
+.codeofcare-video iframe {
+    height: 200px;
+  }
+
+  .Big-box h1 {
+    font-size: 24px;
+  }
+
+  .Big-box p {
+    font-size: 15px;
+  }
+
+  .Box-container div {
+    width: 100%;
+  }
+
+  .medcine-sql-container p {
+    font-size: 15px;
+  }
+
+  .medcine-button-sections a {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .medicine-icon-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+
+  .social-footer {
+    padding: 50px 10px;
+  }
+
+  .social-links a {
+    font-size: 14px;
+  }
+
+}
+
+
+
+
+
+
+
+
+

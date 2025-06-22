@@ -1,0 +1,227 @@
+[
+    {
+        "name": "خبز أبيض",
+        "gi": 75,
+        "category": "مرتفع",
+        "suggested_alternative": "خبز الحبوب الكاملة"
+    },
+    {
+        "name": "بطاطا بيضاء",
+        "gi": 85,
+        "category": "مرتفع",
+        "suggested_alternative": "بطاطا حلوة"
+    },
+    {
+        "name": "أرز أبيض",
+        "gi": 73,
+        "category": "مرتفع",
+        "suggested_alternative": "أرز بني"
+    },
+    {
+        "name": "شوفان سريع التحضير",
+        "gi": 66,
+        "category": "متوسط",
+        "suggested_alternative": "شوفان كامل"
+    },
+    {
+        "name": "شوفان كامل",
+        "gi": 55,
+        "category": "منخفض",
+        "suggested_alternative": null
+    },
+    {
+        "name": "موز",
+        "gi": 51,
+        "category": "منخفض",
+        "suggested_alternative": null
+    },
+    {
+        "name": "بطيخ",
+        "gi": 72,
+        "category": "مرتفع",
+        "suggested_alternative": "توت أو فراولة"
+    },
+    {
+        "name": "عصير تفاح",
+        "gi": 41,
+        "category": "منخفض",
+        "suggested_alternative": "تفاح كامل"
+    },
+    {
+        "name": "تفاح",
+        "gi": 38,
+        "category": "منخفض",
+        "suggested_alternative": null
+    },
+    {
+        "name": "ذرة",
+        "gi": 52,
+        "category": "منخفض",
+        "suggested_alternative": null
+    },
+    {
+        "name": "بقوليات (عدس)",
+        "gi": 32,
+        "category": "منخفض",
+        "suggested_alternative": null
+    },
+    {
+        "name": "عصير برتقال",
+        "gi": 50,
+        "category": "منخفض",
+        "suggested_alternative": "برتقال طازج"
+    },
+    {
+        "name": "تمر",
+        "gi": 103,
+        "category": "مرتفع",
+        "suggested_alternative": "فاكهة مجففة منخفضة GI مثل المشمش"
+    },
+    {
+        "name": "كورن فليكس",
+        "gi": 81,
+        "category": "مرتفع",
+        "suggested_alternative": "شوفان كامل أو رقائق نخالة"
+    },
+    {
+        "name": "مكرونة بيضاء",
+        "gi": 49,
+        "category": "منخفض",
+        "suggested_alternative": "مكرونة قمح كامل"
+    },
+    {
+        "name": "زبادي محلى",
+        "gi": 61,
+        "category": "متوسط",
+        "suggested_alternative": "زبادي طبيعي بدون سكر"
+    },
+    {
+        "name": "حليب كامل الدسم",
+        "gi": 39,
+        "category": "منخفض",
+        "suggested_alternative": null
+    },
+    {
+        "name": "عنب",
+        "gi": 59,
+        "category": "متوسط",
+        "suggested_alternative": "توت"
+    },
+    {
+        "name": "كوكاكولا",
+        "gi": 63,
+        "category": "متوسط",
+        "suggested_alternative": "ماء أو عصير فواكه طبيعي"
+    },
+    {
+        "name": "بطاطا مقلية",
+        "gi": 75,
+        "category": "مرتفع",
+        "suggested_alternative": "بطاطا مشوية أو مسلوقة"    
+    },
+    {
+        "name": "شوكولاتة بالحليب",
+        "gi": 42,
+        "category": "منخفض",
+        "suggested_alternative": "شوكولاتة داكنة"
+    },
+    {
+        "name": "خبز توست أبيض",
+        "gi": 70,
+        "category": "مرتفع",
+        "suggested_alternative": "توست الحبوب الكاملة"
+    },
+    {
+        "name": "كعك الأرز",
+        "gi": 82,
+        "category": "مرتفع",
+        "suggested_alternative": "بسكويت الشوفان"
+    },
+    {
+        "name": "فشار",
+        "gi": 65,
+        "category": "متوسط",
+        "suggested_alternative": null
+    },
+    {
+        "name": "عصير عنب",
+        "gi": 59,
+        "category": "متوسط",
+        "suggested_alternative": "عنب كامل"
+    },
+    {
+        "name": "كعكة الشوكولاتة",
+        "gi": 58,
+        "category": "متوسط",
+        "suggested_alternative": "كعكة الشوفان"
+    },
+    {
+        "name": "آيس كريم",
+        "gi": 61,
+        "category": "متوسط",
+        "suggested_alternative": "زبادي مثلج"
+    },
+    {
+        "name": "عصير جريب فروت",
+        "gi": 25,
+        "category": "منخفض",
+        "suggested_alternative": "جريب فروت كامل"
+    },
+    {
+        "name": "خبز البيغل",
+        "gi": 72,
+        "category": "مرتفع",
+        "suggested_alternative": "خبز الحبوب الكاملة"
+    },
+    {
+        "name": "كعكة الجزر",
+        "gi": 47,
+        "category": "منخفض",
+        "suggested_alternative": null
+        
+    },
+    {
+        "name": "عصير ليمون",
+        "gi": 20,
+        "category": "منخفض",
+        "suggested_alternative": "ليمون كامل"
+    },
+    {
+        "name": "خبز البيتا",
+        "gi": 57,
+        "category": "متوسط",
+        "suggested_alternative": "خبز الحبوب الكاملة"
+    },
+    {
+        "name": "كعكة الفواكه",
+        "gi": 65,
+        "category": "متوسط",
+        "suggested_alternative": "بان كيك الشوفان"
+    },
+    {
+        "name": "أرز أبيض (شركة ساتو المحدودة، اليابان) مع فول الصويا المخمر (ناتو)",
+        "gi": "56",
+        "category": "متوسط",
+        "suggested_alternative": "أرز بني مع ناتو"
+    },
+    {
+        "name": "خبز فيينا المخمر",
+        "gi": "66",
+        "category": "متوسط",
+        "suggested_alternative": "خبز الحبوب الكاملة"
+    },
+    {
+        "name": "أرز أبيض مع حساء ميسو سريع التحضير (حساء معجون فول الصويا)",
+        "gi": "61",
+        "category": "متوسط",
+        "suggested_alternative": "ارز بني مع حساء ميسو"
+    },
+    {
+        "name": "ياكولت",
+        "gi": "58",
+        "category": "متوسط",
+        "suggested_alternative": "زبادي طبيعي"
+    }
+
+
+]

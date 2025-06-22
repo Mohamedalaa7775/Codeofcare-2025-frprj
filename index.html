@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="هذا الموقع يقدم خدمات علاجية لمرضى الأمراض المزمنة مثل السكر والضغط وأمراض القلب ,
+ عن طريق تنظيم جرعات الأدوية للمريض , إنشاء تقارير دورية عن حالة المريض , مقالات تفصيلية حول الأمراض المزمنة لافادة حديثي الإصابة , حساب عدد الجرعات اليومية وفقا لنوع الأنسولين و عمر الشخص ووزنه.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>CodeOfCare</title>
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!----------------------- Firebase - scripts  --------------------->
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-storage-compat.js"></script>
+    <!----------------------------------------------------------------->
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Noto+Kufi+Arabic:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cabin:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/style.css">
+    <!--------------------------------------------------------->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyB7dOuq8_3wxBdRk46nmqEO03eunhCloYA",
+            authDomain: "code-of-care-f36aa.firebaseapp.com",
+            projectId: "code-of-care-f36aa",
+            storageBucket: "code-of-care-f36aa.firebasestorage.app",
+            messagingSenderId: "394517121944",
+            appId: "1:394517121944:web:4fadbce279af95e8c139ed",
+            measurementId: "G-JVNEYQM0F1"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        import { getdatabase, ref, child, get, set, update, remove } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js"
+        const dp = getdatabase();
+
+
+
+
+
+        // Prevent zoom in and zoom out
+    document.body.addEventListener('wheel', function(event) {
+    if (event.ctrlKey) {
+        event.preventDefault(); }});
+
+
+
+
+
+
+        
+
+
+
+
+
+
+    </script>
+    <!------------------------------------------------------------------------------>
+</head>
+
+<body>
+
+
+
+        <div class="head">
+            <a href="index.html">Code Of Care</a>
+            <div class="line"></div>
+            <h4 class="head-h4">أَنِّي مَسَّنِيَ الضُّرُّ </h4>
+        </div>
+
+
+    <!-------------------------------------Upper - page ----------------------------------------------->
+<div class="Upper-page">
+
+    <svg viewBox="0 0 800 400" class="upper-svg">
+        <defs>
+            <linearGradient id="grad" x1="0%" y1="50%" x2="100%" y2="50%">
+                <stop offset="0%" class="moving-gradient" />
+                <stop offset="100%" stop-color="#00ffff40" />
+            </linearGradient>
+        </defs>
+        
+        <path d="M 0 300 Q 150 200, 300 300 T 600 300 T 900 300" 
+            stroke="url(#grad)" stroke-width="2" fill="none" />
+        <path d="M 0 310 Q 150 210, 300 310 T 600 310 T 900 310" 
+            stroke="url(#grad)" stroke-width="2" fill="none" />
+        <path d="M 0 320 Q 150 220, 300 320 T 600 320 T 900 320" 
+            stroke="url(#grad)" stroke-width="2" fill="none" />
+    </svg>
+
+
+    <svg viewBox="0 0 800 400" class="bottom-svg">
+        <defs>
+            <linearGradient id="grad" x1="0%" y1="50%" x2="100%" y2="50%">
+                <stop offset="0%" class="moving-gradient" />
+                <stop offset="100%" stop-color="#00ffff40" />
+            </linearGradient>
+        </defs>
+        
+        <path d="M 0 300 Q 150 200, 300 300 T 600 300 T 900 300" 
+            stroke="url(#grad)" stroke-width="2" fill="none" />
+        <path d="M 0 310 Q 150 210, 300 310 T 600 310 T 900 310" 
+            stroke="url(#grad)" stroke-width="2" fill="none" />
+        <path d="M 0 320 Q 150 220, 300 320 T 600 320 T 900 320" 
+            stroke="url(#grad)" stroke-width="2" fill="none" />
+    </svg>
+</div>
+<!-- ------------------- -->
+            <div class="Ar-Text-and-animated-svg">
+                <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+                <dotlottie-player src="https://lottie.host/e369e43f-4a16-4c9f-8712-4826c2f53d64/XQNExFI0S1.lottie" class="Doctor-animation" background="transparent" speed="1" loop autoplay></dotlottie-player>
+             
+                
+                <span class="Ar-Text">
+                    عزيزي المريض بالامراض المزمنة انت الأن في أول منصة متكاملة للعناية بجميع جوانب المريض النفسية والبدنية والصحية موفرة له البيئه المناسبه من أطباء وأدوية دولية ومحلية بأحدث طرق العلاج المتعارف عليها حتي الأن مكونة بذلك مجتمع متناغم رفيقاً لمسيرتك في التعافي 
+                    ,هدفنا هو العنايه بمرضى الامراض المزمنة بشكل عام جامعين بين التكنولوچيا وعلوم الطب المختلفه قاطعين بذلك طريق  
+                    <wbr>طويل في رحله لمحاربه الأمراض المزمنه ✨</wbr>
+                    
+                </span>  
+            </div>
+           
+            <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+            <dotlottie-player src="https://lottie.host/6f7f7b61-74dd-4928-8158-8efc0145118a/Q8UpC8v2CK.lottie" background="transparent" speed="1"  class="dotlottie-player-dowan-arrow-1" loop autoplay></dotlottie-player>
+           
+            <div class="codeofcare-video">
+                <iframe  src="https://www.youtube-nocookie.com/embed/oE3lOYCPkEY?si=-FiFW0Jgq69FTwNW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+            <dotlottie-player src="https://lottie.host/6f7f7b61-74dd-4928-8158-8efc0145118a/Q8UpC8v2CK.lottie" background="transparent" speed="1"  class="dotlottie-player-dowan-arrow-2" loop autoplay></dotlottie-player>
+<!-------------------------------------------- svg-under-video ------------------------------->
+<!-- <svg viewBox="0 0 1200 200" class="svg-under-video" preserveAspectRatio="none" style="width: 100%; height: 150px;">
+    <defs>
+        <linearGradient id="grad" x1="0%" y1="50%" x2="100%" y2="50%">
+            <stop offset="0%" stop-color="#00ffff" />
+            <stop offset="100%" stop-color="#00ffff40" />
+        </linearGradient>
+    </defs>
+    
+    <path d="M 0 100 Q 300 50, 600 100 T 1200 100" 
+    
+          stroke="url(#grad)" stroke-width="2" fill="none" />
+    <path d="M 0 110 Q 300 60, 600 110 T 1200 110" 
+          stroke="url(#grad)" stroke-width="2" fill="none" />
+    <path d="M 0 120 Q 300 70, 600 120 T 1200 120" 
+          stroke="url(#grad)" stroke-width="2" fill="none" />
+</svg> -->
+        
+
+<!--------------------------------------------- container - Of - Boxes -------------------------------------------------->
+
+        <!-- <div class="Box-background" style="height: 57em;
+          background-color: #d4e7f7; position: relative;z-index: -1000;margin-top: -20%;box-shadow: 0 0 39px 85px #d4e7f7; "> -->
+
+
+        <div class="container">
+
+            <div class="Big-box">
+                <h1>Our Best Services For <br>Your Solution</h1>
+                <p>We provide these services sincerely for the sake of God to patients with chronic diseases,<br> as they enable them to live with their diseases naturally and make it easy for them<br> to deal with the diseases and not only be concerned for their families and live in peace,<br> security and health, God willing.</p>
+            </div> 
+        </div>
+        <div class="Box-container">
+
+            <div class="Box-1">
+                <img src="glucose-meter.gif"  alt="">
+                <h3>Calculating daily doses for diabetics</h3> 
+                <p>We can measure the daily doses for diabetics by knowing the patient's weight only,<wbr> and thus we can provide him with a diet service for his meals , There is also a medication reminder service and an alert to take the prescribed medication </p>
+            </div>
+           
+            <div class="Box-2">
+                <img src="heart.gif"  alt="">
+                <h3>Predicting the possibility of a heart attack</h3> 
+               <p>Some elderly people and others suffer from heart diseases. We provide them with a specialized tool to predict the possibility of having a heart attack based on age, weight, blood glucose,<wbr> and blood pressure.</p>
+            </div>
+           
+            <div class="Box-3">
+                <img src="tensiometer.gif"  alt="">
+               <h3>Providing a diet service for people </h3> 
+               <p>Providing a complete diet service for patients with high blood pressure through Database for most foods, based on the percentage of nitrogen in them, because it affects patients with high blood pressure negatively.</p>
+            </div>
+            <div class="Box-4">
+                <img src="chatbot.gif"  alt="">
+               <h3>Medical chatbot for all diseases</h3> 
+               <p>We offer a medical chatbot that can answer any question in the context of medicine only. It can also recommend medications for you and help you in emergency situations and cases of high and low blood sugar for diabetics.</p>
+            </div>
+        
+    </div>
+    <!---------------------------------Main-Sections---------------------------------->
+<!--------------------------------- Chatbot & Sugar Tracking Sections -------------------------------->
+<div class="interactive-sections-container">
+    <div class="enhanced-chatbot-section">
+        <div class="chatbot-content">
+            <div class="chatbot-header">
+                <h3>المساعد الطبي الذكي</h3>
+                <div class="chatbot-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+            </div>
+            <p class="chatbot-description">
+                احصل على إجابات فورية لأسئلتك الطبية، تنبيهات بالأدوية، 
+                ونصائح صحية مخصصة من ذكاء اصطناعي متخصص في الرعاية الصحية
+            </p>
+            <div class="chatbot-features">
+                <div class="feature">
+                    <i class="fas fa-comment-medical"></i>
+                    <span>استشارات طبية فورية</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-pills"></i>
+                    <span>تذكير بمواعيد الأدوية</span>
+                </div>
+            </div>
+                    <div class="Qaid-el-enshaa">! قيد الانشاء</div>
+
+            <button class="chatbot-button animation-button">
+                <a href="index.html">ابدأ المحادثة الآن <i class="fas fa-arrow-left"></i></a>
+            </button>
+        </div>
+        <div class="chatbot-visual">
+            <img src="Designer (5).jpeg" alt="مساعد طبي ذكي">
+        </div>
+        
+    </div>
+
+    <!-- قسم قياس السكر بعد الاستيقاظ -->
+    <div class="enhanced-measuring-section">
+        <div class="measuring-content">
+            <div class="measuring-header">
+                <h3>تتبع مستوى السكر</h3>
+                <div class="measuring-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+            </div>
+            <p class="measuring-description">
+                سجل قراءات السكر الصباحية، تتبع تطور مستوياتك، واحصل على تحليلات 
+                ذكية تساعدك في إدارة مرض السكري بشكل أفضل
+            </p>
+            <div class="measuring-features">
+                <div class="feature">
+                    <i class="fas fa-calendar-day"></i>
+                    <span>سجل يومي للقراءات</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-bell"></i>
+                    <span>تنبيهات القياس</span>
+                </div>
+            </div>
+            <button class="measuring-button animation-button">
+                <a href="awake-measure.html">ابدأ التتبع الآن <i class="fas fa-arrow-left"></i></a>
+            </button>
+        </div>
+        <div class="measuring-visual">
+            <img src="Designer (4).jpeg" alt="تتبع مستوى السكر">
+        </div>
+    </div>
+</div>
+
+
+
+
+
+ <div class="Main-section">
+
+    
+
+    <div class="Diabetes-section">
+        <div class="disease-background-Diabetes"></div>
+        <img class="Icon-Of-Cards" src="glucose.png" alt="مرض السكري" style="position: relative;z-index: 100;width: 250px;height: 250px;display: flex;justify-content: center;align-items: center;margin-left: 100px;">
+        
+        <h4 class="disease-name">مرض السكري</h4>
+        <p class="disease-description">
+            يمكنك من خلال هذه الخدمة حساب عدد الجرعات اليومية لمريض السكر و تصحيح الجلوكوز الخاص بالمريض
+            وتقديم ايضا النسبة الجرعات الي الكربوهيدرات المناسبة له والتي تساعده على تحسين حالته الصحية
+        </p>
+        <div class="button-sections">
+            <a href="Service-dia.html" class="pulse-button">ابدأ تجربتك المجانية 🎉</a>   
+        </div>
+    </div>
+    
+    <div class="Hypertension-section">
+        <img src="sphygmomanometer.png" class="Icon-Of-Cards" alt="مرض ضغط الدم" style="position: relative;z-index: 100;width: 250px;height: 250px;display: flex;justify-content: center;align-items: center;margin-left: 100px;">
+        <div class="disease-background-Hypertension"></div>
+        
+        <h4 class="disease-name">مرض ضغط الدم</h4>
+        <p class="disease-description">
+            يمكنك وضع نوع او مكونات وجباتك اليومية وسنعطيك اذا كنت مريض بالضغط هل اذا كانت
+            هذه الوجبة تتسبب في ارتفاع الضغط لديك او ان كانت ستؤثر على صحتك بشكل عام
+        </p>
+        <div class="button-sections">
+            <a href="Hypertension.html" class="pulse-button">ابدأ تجربتك المجانية 🎉</a>
+        </div>
+    </div>
+    
+    <div class="Heart-section">
+        <img src="heart-attack.png" alt="أمراض القلب" class="Icon-Of-Cards" style="position: relative;z-index: 100;width: 250px;height: 250px;display: flex;justify-content: center;align-items: center;margin-left: 100px;">
+        <div class="disease-background-Heart"></div>
+        
+        <h4 class="disease-name">امراض القلب</h4>
+        <p class="disease-description">
+            يمكنك الآن معرفة نسبة احتمالية اصابتك ب جلطة في القلب بناء على (عمرك , وزنك , نسبة الكوليسترول في دمك  "يجب ان تكون اتممت قياسها من المعمل" , ضغط الدم لديك)
+        </p>
+        <div class="button-sections">
+            <a href="heart.html" class="pulse-button">ابدأ تجربتك المجانية 🎉</a>
+        </div>
+    </div>
+ </div>
+    <!--=================================== medicine - sql =====================================================================-->
+
+ <div class="medicine-icon-circle">
+    <i class="fa-solid fa-pills" style="color: #131c2b;"></i>
+</div>
+<div class="medcine-sql-container">
+
+        <p>
+            تقدر تدير الأدوية الخاصة بك بكل سهولة من خلال قاعدة بياناتنا المتكاملة , بحيث يمكنك اضافة الأدوية و تعديلها و حذفها و اضافة تفاصيل مثل وقت أخذ الدواء وعدد المرات في اليوم و هل مسائي او صباحي او وقت محدد
+        </p>
+
+        <div class="medcine-button-sections">
+            <a href="medicine-sql.html" >إدارة الأدوية</a>
+
+        </div>
+</div>
+
+
+ 
+    <!--=================================== "Footer" =====================================================================-->
+ 
+    <footer class="social-footer">
+        <h3>My social</h3>
+        <div class="social-links">
+            <a href="https://x.com/Mohamedd855?t=IVZvuQjJHJUunCZmmj0gFQ&s=09"  class="social-link twitter" aria-label="X">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>                             
+            </a>
+            
+            <a href="https://www.facebook.com/profile.php?id=100088276131927&mibextid=rS40aB7S9Ucbxw6v" class="social-link facebook" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        <a href="https://www.instagram.com/mmohamedalaa___/?utm_source=ig_web_button_share_sheet" class="social-link instagram" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/mohamed-alaa-a09561274?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " class="social-link linkedin" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" class="social-link tiktok" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="https://youtube.com/@mohamedalaa-qb9kx?si=7XZZs2T3R7WtDmyW" class="social-link youtube" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
+    <div class="copyright">
+        © 2025  جميع الحقوق محفوظة .Codeofcare
+    </div>
+
+
+
+
+
+
+</footer>
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

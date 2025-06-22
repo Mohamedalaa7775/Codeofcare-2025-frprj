@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sodium and Food Recommendation Tool</title>
+    <style>
+        body {
+            font-family: "Rubik", sans-serif;
+            margin: 20px;
+            background-color: #030509;
+            color: #333;
+        }
+        h1 {
+            color: #0056b3;
+        }
+        p {
+            color: #eaf4ff;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #eaf4ff;
+
+        }
+        input, select {
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+        button {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #003d80;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #eaf4ff;
+            border-left: 5px solid #0056b3;
+        }
+        .warning {
+            background-color: #ffe5e5;
+            border-left: 5px solid #d9534f;
+        }
+
+
+        .notice {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #141414;
+            border-left: 5px solid #ff0000;
+        }
+        .notice h2 {
+            color: #ffffff;
+        }
+        .notice p {
+            color: #ffffff;
+            font-size: 17px;
+            font-family: "Rubik", sans-serif;
+        }
+        .notice h4 {
+            color: #ffc400;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sodium and Food Recommendation Tool</h1>
+    <p>Enter a food name to check its sodium content and suitability for high blood pressure patients.</p>
+
+    <form id="foodForm">
+        <label for="foodName">Food Name:</label>
+        <input type="text" id="foodName" placeholder="Enter the food name">
+        <button type="button" onclick="checkFood()">Check Food</button>
+    </form>
+
+    <div id="result" class="result" style="display:none;"></div>
+
+
+    <div class="notice">
+        <h2>Notice!</h2>
+            <p>1- the Tool is not a substitute for professional medical advice. Always consult with a healthcare provider for dietary recommendations, especially if you have high blood pressure or other health conditions.</p> 
+            <p> 2- The information provided by this tool is based on a "limited database" and may not cover all food items. Always check food labels for the most accurate sodium content. </p>
+            <hr>
+            <h4>- Available foods => ("white bread", "instant noodles", "cheddar cheese", "fried rice"," spaghetti with marinara sauce"," fresh apple"," banana"," canned green beans".)</h4>
+            <hr>
+            <p>3- The tool is designed to help you make informed choices about your diet, but it should not be used as a sole resource for managing your health. Always consider individual dietary needs and preferences.</p>
+       
+    </div>
+
+
+
+    <script>
+        const foodDatabase = {
+            "white bread": { sodium: 170, suitable: false, alternatives: ["Whole wheat bread", "Gluten-free bread"] },
+            "instant noodles": { sodium: 1200, suitable: false, alternatives: ["Rice noodles", "Zucchini noodles"] },
+            "cheddar cheese": { sodium: 180, suitable: true, alternatives: ["Low-sodium cheese"] },
+            "fried rice": { sodium: 600, suitable: false, alternatives: ["Brown rice", "Quinoa"] },
+            "spaghetti with marinara sauce": { sodium: 600, suitable: false, alternatives: ["Whole wheat spaghetti", "Zucchini spaghetti"] },
+            "fresh apple": { sodium: 0, suitable: true, alternatives: [] },
+            "banana": { sodium: 1, suitable: true, alternatives: [] },
+            "canned green beans": { sodium: 350, suitable: false, alternatives: ["Fresh green beans", "Steamed broccoli"] }
+        };
+
+        function checkFood() {
+            const foodName = document.getElementById("foodName").value.trim().toLowerCase();
+            const resultDiv = document.getElementById("result");
+
+            if (!foodName) {
+                resultDiv.style.display = "block";
+                resultDiv.className = "result warning";
+                resultDiv.textContent = "Please enter a food name.";
+                return;
+            }
+
+            const foodData = foodDatabase[foodName];
+
+            if (foodData) {
+                const { sodium, suitable, alternatives } = foodData;
+                resultDiv.style.display = "block";
+                resultDiv.className = "result";
+                if (suitable) {
+                    resultDiv.innerHTML = `<strong>${foodName}:</strong> Sodium content is <strong>${sodium} mg</strong>. This food is <strong>suitable</strong> for high blood pressure patients.`;
+                } else {
+                    resultDiv.innerHTML = `<strong>${foodName}:</strong> Sodium content is <strong>${sodium} mg</strong>. This food is <strong>not suitable</strong> for high blood pressure patients.<br><br>
+                    Recommended alternatives: <ul>${alternatives.map(item => `<li>${item}</li>`).join("")}</ul>`;
+                }
+            } else {
+                resultDiv.style.display = "block";
+                resultDiv.className = "result warning";
+                resultDiv.textContent = "Food not found in the database. Please try another item.";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Noto+Kufi+Arabic:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Heart Risk Calculator</title>
+    <style>
+        body {
+            font-family: "Rubik", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #080c14;
+            height: 200vh;
+        }
+
+        .container {
+            max-width: 700px;
+            position: relative;
+            top: 0%;
+            margin: 50px auto;
+            padding: 30px;
+            background: #060f22;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        h2 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 30px;
+            color: #EEE;        
+        }
+
+        input {
+            padding: 10px;
+            margin-top: 5px;
+            border: 2px solid #080c14;
+            border-radius: 4px;
+        }
+
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e7f5e9;
+            border-left: 4px solid #28a745;
+            border-radius: 4px;
+        }
+
+        .result.low {
+            border-color: #28a745;
+            background: #e7f5e9;
+        }
+
+        .result.medium {
+            border-color: #ffc107;
+            background: #fff8e5;
+        }
+
+        .result.high {
+            border-color: #dc3545;
+            background: #fbe9eb;
+        }
+        /* ------------------ container-of-inputs */
+    .container-of-inputs {
+        width: 1600px;
+        height: 1000px;
+        margin: -310px   auto;
+        position: relative;
+        top: 30%;
+        background: #111927;
+        border-radius: 20px;
+        border: 1px solid #9f1239;
+        box-shadow: 0 22px 32px 0 rgba(0, 0, 0, 0.37);
+           }
+    .container-of-inputs h1 {
+        transform: translate(0px, 10px);
+        border-bottom: 2px solid #9f1239;
+        color: #9f1239;
+        padding-bottom: 10px;
+        text-align: center;
+}
+ 
+ 
+
+    .main-type-1 {
+        width: 98%;
+        height: 600px;
+        position: relative;
+        background-color: #101827;
+        margin-top: 60%;
+    }
+    #Heart-beat-gif {
+    width: 50px;
+    height: 52px;
+    position: relative;
+    top: 15%;
+    left: 36%;
+    z-index: 1001;
+}
+    #Heart-beat-gif-2 {
+        width: 50px;
+        height: 52px;
+        position: relative;
+        top: 15%;
+        left: 57%;
+        z-index: 1001;
+    }
+    #dotlottie-player {
+        transform: scale(3.2) translate3d(182px, 30px, 0px);
+        opacity:100%;
+        width: 30%;
+        height: 35%;
+    }
+
+
+/* ----------------[-- Name of type and Return  --] ---------------------------------------------------*/
+
+.Type-name {
+    width: 300px;
+    height: 130px;
+    background-color: #1e283b;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    font-family: "Rubik", sans-serif;
+    font-size: 20px;  
+    transform: translate(240%, 50px);  
+} 
+.Type-name span {
+    color: #9f1239;
+    font-size: 34px;
+    font-family: "Rubik", sans-serif;
+    transform: translate(40px, -30px);
+}
+
+.Type-name svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 35px;
+    text-align: center;
+    font-size: 20px;
+    transform: translate(-40px, 30px);
+    background-color: #9f1239;
+    color: #EEE;
+    border-radius: 20px;
+    text-decoration: inherit;
+    box-decoration-break: none;
+    
+}
+
+
+
+
+/* ------------------------ Media Query Phone --------------------- */
+
+
+@media (max-width: 430px) {
+
+    body {
+            font-family: "Rubik", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #080c14;
+            height: 200vh;
+        }
+
+        .container {
+            max-width: 325px;
+            position: relative;
+            top: -2%;
+            margin: 50px auto;
+            padding: 30px;
+            background: #080c14;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        h2 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 30px;
+            color: #EEE;        
+        }
+
+        input {
+            padding: 10px;
+            margin-top: 5px;
+            border: 2px solid #080c14;
+            border-radius: 4px;
+        }
+
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e7f5e9;
+            border-left: 4px solid #28a745;
+            border-radius: 4px;
+        }
+
+        .result.low {
+            border-color: #28a745;
+            background: #e7f5e9;
+        }
+
+        .result.medium {
+            border-color: #ffc107;
+            background: #fff8e5;
+        }
+
+        .result.high {
+            border-color: #dc3545;
+            background: #fbe9eb;
+        }
+        /* ------------------ container-of-inputs */
+    .container-of-inputs {
+        width: 410px;
+        height: 970px;
+        margin: -310px   auto;
+        position: relative;
+        top: 30%;
+        background: #101827;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 22px 32px 0 rgba(0, 0, 0, 0.37);
+           }
+    .container-of-inputs h1 {
+        transform: translate(0px, 10px);
+        border-bottom: 2px solid #9f1239;
+
+        padding-bottom: 10px;
+        text-align: center;
+
+           }
+ 
+ 
+
+    .main-type-1 {
+        width: 98%;
+        height: 600px;
+        position: relative;
+        background-color: #101827;
+        margin-top: 60%;
+    }
+    #Heart-beat-gif {
+        width: 40px;
+        height: 40px;
+        position: relative;
+        top: 13%;
+        left: 2%;
+        z-index: 1001;
+}
+    #Heart-beat-gif-2 {
+        width: 40px;
+        height: 40px;
+        position: relative;
+        top: 13%;
+        left: 78%;
+        z-index: 1001;
+    }
+    #dotlottie-player {
+        transform: scale(3.2) translate3d(47px, -77px, 0px);
+        opacity: 100%;
+    }
+
+
+    .heart-beat {
+    width: 500px;
+    height: 500px;
+    z-index: 1002;
+
+
+
+}
+
+
+/* ----------------[-- Name of type and Return  --] ---------------------------------------------------*/
+
+.Type-name {
+    width: 300px;
+    height: 130px;
+    background-color: #1e283b;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    font-family: "Rubik", sans-serif;
+    font-size: 20px;  
+    transform: translate(25%, 50px);  
+} 
+.Type-name span {
+    color: #9f1239;
+    font-size: 34px;
+    font-family: "Rubik", sans-serif;
+    transform: translate(40px, -30px);
+}
+
+.Type-name a svg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 35px;
+    text-align: center;
+    font-size: 20px;
+    transform: translate(-40px, 30px);
+    background-color: #9f1239;
+    color: #EEE;
+    border-radius: 20px;
+    text-decoration: inherit;
+    box-decoration-break: none;
+    
+}
+
+
+
+
+
+
+}
+
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="Type-name">
+        <span>Heart</span>
+        <a href="index.html" class="return">
+    <svg xmlns="http://www.w3.org/2000/svg" height="12" width="10.5" viewBox="0 0 448 512"><path fill="#ffffff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>        
+        </a>
+    </div>
+
+
+
+
+    </div>
+    <div class="container-of-inputs">
+        <h1>التنبؤ بمدى قابلية حدوث جلطة في القلب</h1>
+        <img src="Heart-beat-gif.gif"id="Heart-beat-gif" alt="">
+        <img src="Heart-beat-gif.gif"id="Heart-beat-gif-2" alt="">
+
+
+
+
+
+        <div class="container">
+            <h2>Heart Risk Calculator</h2>
+            <form id="riskForm">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="18" required>
+    
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" name="weight" required>
+    
+                <label for="bloodPressure">Blood Pressure (mmHg):</label>
+                <input type="number" id="bloodPressure" name="bloodPressure" required>
+    
+                <label for="cholesterol">Cholesterol Level (mg/dL):</label>
+                <input type="number" id="cholesterol" name="cholesterol" required>
+    
+                <button type="button" onclick="calculateRisk()">Calculate Risk</button>
+            </form>
+    
+            <div id="result" class="result" style="display: none;"></div>
+        </div>
+    </div>
+
+
+        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+        <dotlottie-player src="https://lottie.host/1287ed6f-7153-4d45-9654-ef42a0aecab9/M76Z98ULQX.lottie" id="dotlottie-player" background="transparent" speed="1" class="heart-beat"  loop autoplay></dotlottie-player>
+
+
+
+    <script>
+        function calculateRisk() {
+            const age = parseInt(document.getElementById('age').value);
+            const weight = parseInt(document.getElementById('weight').value);
+            const bloodPressure = parseInt(document.getElementById('bloodPressure').value);
+            const cholesterol = parseInt(document.getElementById('cholesterol').value);
+
+            let riskScore = 0;
+
+            if (age > 45) riskScore += 2;
+            if (weight > 80) riskScore += 1;
+            if (bloodPressure > 140) riskScore += 2;
+            if (cholesterol > 200) riskScore += 2;
+
+            let riskLevel = '';
+            let advice = '';
+
+            if (riskScore <= 2) {
+                riskLevel = 'low';
+                advice = 'Your heart risk is low. Maintain a healthy lifestyle with regular exercise and a balanced diet.';
+            } else if (riskScore <= 4) {
+                riskLevel = 'medium';
+                advice = 'Your heart risk is moderate. Consider consulting a healthcare provider for advice on lifestyle adjustments.';
+            } else {
+                riskLevel = 'high';
+                advice = 'Your heart risk is high. It is strongly recommended to consult a healthcare provider immediately.';
+            }
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.className = `result ${riskLevel}`;
+            resultDiv.textContent = advice;
+            resultDiv.style.display = 'block';
+            var ldld = new ldloader({root: '.ldld'});
+
+
+        }
+    </script>
+
+
+      </div>
+</body>
+</html>
